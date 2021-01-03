@@ -3,9 +3,6 @@ class BasicsDemo {
   int Id= 0;
   int ID= 0;
 
-  void foo() {}
-  void Foo() {}
-
   static void print() {
     System.out.println("\n\nInside print ...");
     System.out.println("Hello, world!!"); // Advance cursor to beginning of next line
