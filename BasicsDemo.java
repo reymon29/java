@@ -13,7 +13,7 @@ class BasicsDemo {
     System.out.print("Hello, world!!");   // Cursor stayed after the printed string
     System.out.println("Hello,");
     System.out.print(" ");                // Print a space
-    System.out.print("world!!");
+    // System.out.print("world!!");
   }
 
   public static void main(String[] args){
