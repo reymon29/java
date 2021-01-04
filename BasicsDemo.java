@@ -22,6 +22,9 @@ class BasicsDemo {
     int intBinary = 0b01000001;
     System.out.println(intBinary);
 
+    int intOctal = 0101;
+    System.out.println(intOctal);
+
   }
 
   public static void main(String[] args){
