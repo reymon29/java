@@ -11,7 +11,14 @@ class CurrencyConverter {
 
   void printCurrencies(){
     System.out.println("rupee " + rupee);
+    System.out.println("dirham " + dirham);
+    System.out.println("real " + real);
+    System.out.println("chilean_peso " + chilean_peso);
+    System.out.println("mexican_peso " + mexican_peso);
+    System.out.println("_yen " + _yen);
     System.out.println("$australian: " + $austrailian);
+    System.out.println("dollar " + dollar);
+    System.out.println("Rupee63 " + Rupee63);
   }
 
   public static void main(String[] args){
