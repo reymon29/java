@@ -13,15 +13,22 @@ class BasicsDemo {
     // System.out.print("world!!");
   }
 
-  public static void main(String[] args){
-    print();
+  static void primitives() {
+    System.out.println("\n\nInside primitives ...");
+    int intHex = 0X0041;
+    System.out.println(intHex); // 16 power 0 *1 + 16 power 1 * 4
 
-    int i = 6;
-    int j = 2;
-    System.out.println(i + j);
-    System.out.println(i - j);
-    System.out.println(i * j);
-    System.out.println(i / j);
-    System.out.println(i % j);
+  }
+
+  public static void main(String[] args){
+    // print();
+    // int i = 6;
+    // int j = 2;
+    // System.out.println(i + j);
+    // System.out.println(i - j);
+    // System.out.println(i * j);
+    // System.out.println(i / j);
+    // System.out.println(i % j);
+    primitives();
   }
 }
