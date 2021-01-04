@@ -18,6 +18,10 @@ class BasicsDemo {
     int intHex = 0X0041;
     System.out.println(intHex); // 16 power 0 *1 + 16 power 1 * 4
 
+    // Java 7
+    int intBinary = 0b01000001;
+    System.out.println(intBinary);
+
   }
 
   public static void main(String[] args){
