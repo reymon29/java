@@ -3,8 +3,8 @@ class Student {
   int nextId = id + 1;
 
   void compute() {
-    System.out.println(id);
-    System.out.println(nextId);
+    System.out.println("id: " + id);
+    System.out.println("nextId: " + nextId);
   }
 
   public static void main(String[] args){
