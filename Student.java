@@ -3,7 +3,7 @@ class Student {
   byte age = 1_8;
 
   long phone = 223_456_7890L;
-  float gpa = 3.8f;
+  double gpa = 3.8;
 
 
 
