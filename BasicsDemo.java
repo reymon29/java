@@ -1,3 +1,4 @@
+import java.math.BigDecimal;
 class BasicsDemo {
   int id = 0;
   int Id= 0;
@@ -36,6 +37,19 @@ class BasicsDemo {
     // System.out.println(i * j);
     // System.out.println(i / j);
     // System.out.println(i % j);
-    primitives();
+    // primitives();
+
+    System.out.println(1 - 0.9);
+    System.out.println(0.1 + 0.2);
+
+    double price = 1000;
+    double discountPercent = 0.9;
+    double discountAmount = price * discountPercent;
+    System.out.println(price - discountAmount);
+    System.out.println(price * (1 - discountPercent));
+
+    BigDecimal first = new BigDecimal("0.1");
+    BigDecimal second = new BigDecimal("0.2");
+    System.out.println(first.add(second));
   }
 }
