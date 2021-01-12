@@ -21,17 +21,18 @@ class BasicsDemo {
 
     // Java 7
     int intBinary = 0b01000001;
-    System.out.println(intBinary);
+    System.out.println("intBinary: " + intBinary);
 
     int intOctal = 0101;
-    System.out.println(intOctal);
-
+    System.out.println("intOctal: " + intOctal);
+    int intChar = 'A';
+    System.out.println("intChar: " + intChar);
     char charInt = 65;
-    System.out.println(charInt);
+    System.out.println("charInt: " + charInt);
     char charHex = 0X0041;
-    System.out.println(charHex);
+    System.out.println("charHex: " + charHex);
     char charBinary = 0b01000001;
-    System.out.println(charBinary);
+    System.out.println("charBinary: " + charBinary);
   }
 
   public static void main(String[] args){
