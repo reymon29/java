@@ -7,8 +7,6 @@ class Student {
 
   char degree = 'B';
 
-
-
   void compute() {
     int nextId = id + 1;
     System.out.println("id: " + id);
