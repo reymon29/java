@@ -8,8 +8,7 @@ class Student {
   double gpa;
   char degree;
   boolean international;
-  double tuitionFees = 12000.0;
-  double internationFees = 5000.0;
+  double tuitionFees = 12000.0, internationFees = 5000.0;
 
   void compute() {
     computeCount = computeCount + 1;
