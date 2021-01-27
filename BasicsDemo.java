@@ -62,30 +62,15 @@ class BasicsDemo {
     byte bByte = 65;
     cChar = (char)bByte; // special conversion (widening from byte --> int followed by narrowing from int --> char)
     System.out.println("cChar: " + cChar);
-    }
+  }
+
+  static int count = 25;
+
 
   public static void main(String[] args){
     // print();
-    // int i = 6;
-    // int j = 2;
-    // System.out.println(i + j);
-    // System.out.println(i - j);
-    // System.out.println(i * j);
-    // System.out.println(i / j);
-    // System.out.println(i % j);
     // primitives();
     typeCasting();
-    // System.out.println(1 - 0.9);
-    // System.out.println(0.1 + 0.2);
 
-    // double price = 1000;
-    // double discountPercent = 0.9;
-    // double discountAmount = price * discountPercent;
-    // System.out.println(price - discountAmount);
-    // System.out.println(price * (1 - discountPercent));
-
-    // BigDecimal first = new BigDecimal("0.1");
-    // BigDecimal second = new BigDecimal("0.2");
-    // System.out.println(first.add(second));
   }
 }
