@@ -8,7 +8,7 @@ class BasicsDemo {
     System.out.println("\n\nInside print ...");
     System.out.println("Hello, world!!"); // Advance cursor to beginning of next line
     System.out.println();                 // Print empty line
-     System.out.print("Hello, world!!");   // Cursor stayed after the printed string
+    System.out.print("Hello, world!!");   // Cursor stayed after the printed string
     System.out.println("Hello,");
     System.out.print(" ");                // Print a space
     System.out.print("world!!");
@@ -22,7 +22,6 @@ class BasicsDemo {
     // Java 7
     int intBinary = 0b01000001;
     System.out.println("intBinary: " + intBinary);
-
     int intOctal = 0101;
     System.out.println("intOctal: " + intOctal);
     int intChar = 'A';
@@ -64,13 +63,26 @@ class BasicsDemo {
     System.out.println("cChar: " + cChar);
   }
 
-  static int count = 25;
+  static void arrays() {
+    System.out.println("\nInside arrays...");
+    int[] scores = new int[4];
+    // int[] scores = new int[] {90, 70, 80, 100};
+    // int[] scores = {90, 70, 80, 100};
+    scores[0] = 90;
+    scores[1] = 70;
+    scores[2] = 80;
+    scores[3] = 100;
 
-
+    System.out.println("Mid-term1: " + scores[0]);
+    System.out.println("Mid-term2: " + scores[1]);
+    System.out.println("Final: " + scores[2]);
+    System.out.println("Project: " + scores[3]);
+    System.out.println("# of exams: " + scores.length);
+  }
   public static void main(String[] args){
     // print();
     // primitives();
-    typeCasting();
-
+    // typeCasting();
+    arrays();
   }
 }
