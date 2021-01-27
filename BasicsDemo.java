@@ -78,6 +78,17 @@ class BasicsDemo {
     System.out.println("Final: " + scores[2]);
     System.out.println("Project: " + scores[3]);
     System.out.println("# of exams: " + scores.length);
+
+    Student[] students = {new Student(), new Student(), new Student()};
+    // students[0] = new Student();
+    // students[1] = new Student();
+    // students[2] = new Student();
+    students[0].name = "John";
+    students[1].name = "Raj";
+    students[2].name = "Anita";
+    System.out.println("Student 1: " + students[0].name);
+    System.out.println("Student 2: " + students[1].name);
+    System.out.println("Student 3: " + students[2].name);
   }
   public static void main(String[] args){
     // print();
