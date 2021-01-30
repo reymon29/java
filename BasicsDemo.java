@@ -131,6 +131,11 @@ class BasicsDemo {
     double sum = sum(x, y);
     return sum/2;
   }
+
+  static boolean search(int[] list, int key) {
+    return true;
+  }
+
   public static void main(String[] args){
     // print();
     // primitives();
@@ -141,5 +146,7 @@ class BasicsDemo {
     System.out.println(d);
     double d2 = avg(3.0, 2.0);
     System.out.println(d2);
+    int[] list = {2,1};
+    search(list, 2);
   }
 }
