@@ -136,17 +136,27 @@ class BasicsDemo {
     return true;
   }
 
+  static void go(int[] array) {
+    System.out.println("array[0]: " + array[0]);
+    System.out.println("array[1]: " + array[1]);
+    array[1] = 22;
+  }
+
   public static void main(String[] args){
     // print();
     // primitives();
     // typeCasting();
     // arrays();
     // threeDimensionalArrays();
-    double d = sum(3.0, 2.0);
-    System.out.println(d);
-    double d2 = avg(3.0, 2.0);
-    System.out.println(d2);
-    int[] list = {2,1};
-    search(list, 2);
+    // double d = sum(3.0, 2.0);
+    // System.out.println(d);
+    // double d2 = avg(3.0, 2.0);
+    // System.out.println(d2);
+    // int[] list = {2,1};
+    // search(list, 2);
+    System.out.println("Hello");
+    int[] array = {1,2};
+    go(array);
+    System.out.println("array[1]: " + array[1]);
   }
 }
