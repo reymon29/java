@@ -150,6 +150,15 @@ class BasicsDemo {
     System.out.println("go(short s)");
   }
 
+  static void varargsOverLoad(boolean b, int i, int j, int k) {
+    System.out.println("\nInside without varargs ...");
+  }
+
+  static void varargsOverLoad(boolean b, int... list) {
+    System.out.println("\nInside varargsOverload with varargs ...");
+    System.out.println("list.length: " + list.length);
+  }
+
   public static void main(String[] args){
     // print();
     // primitives();
@@ -162,14 +171,16 @@ class BasicsDemo {
     // System.out.println(d2);
     // int[] list = {2,1};
     // search(list, 2);
-    System.out.println("Hello");
-    int[] array = {1,2};
-    go(array);
-    System.out.println("array[1]: " + array[1]);
+    // System.out.println("Hello");
+    // int[] array = {1,2};
+    // go(array);
+    // System.out.println("array[1]: " + array[1]);
+    // go(1000);
+    // byte b = 22;
+    // go(b);
+    varargsOverLoad(true, 1,2,3);
+    varargsOverLoad(true, 1,2,3,4,5,6,7,8);
+    varargsOverLoad(true);
 
-    go(1000);
-
-    byte b = 22;
-    go(b);
   }
 }
