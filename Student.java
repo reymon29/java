@@ -1,5 +1,5 @@
 class Student {
-  static int computeCount;
+  static int sudentCount;
   int id;
   String name;
   String gender;
@@ -20,27 +20,29 @@ class Student {
       gpa = newGpa;
       degree = newDegree;
       international = isInternational; 
-  }
+
+      sudentCount = sudentCount + 1;
+      int nextId = id + 1;
+      if (international) {
+        tuitionFees = tuitionFees + internationFees;
+      }
+
+      System.out.println("\nid: " + id);
+      System.out.println("nextId: " + nextId);
+      System.out.println("name: " + name);
+      System.out.println("gender: " + gender);
+      System.out.println("age: " + age);
+      System.out.println("phone: " + phone);
+      System.out.println("gpa: " + gpa);
+      System.out.println("degree: " + degree);
+      System.out.println("tuitionFees: " + tuitionFees);
+      System.out.println("sudentCount: " + sudentCount);
+    }
 
   Student() {}
 
   void compute() {
-    computeCount = computeCount + 1;
-    int nextId = id + 1;
-    if (international) {
-      tuitionFees = tuitionFees + internationFees;
-    }
-
-    System.out.println("\nid: " + id);
-    System.out.println("nextId: " + nextId);
-    System.out.println("name: " + name);
-    System.out.println("gender: " + gender);
-    System.out.println("age: " + age);
-    System.out.println("phone: " + phone);
-    System.out.println("gpa: " + gpa);
-    System.out.println("degree: " + degree);
-    System.out.println("tuitionFees: " + tuitionFees);
-    System.out.println("computeCount: " + computeCount);
+    
 
   }
 
@@ -48,14 +50,8 @@ class Student {
 
   public static void main(String[] args){
     Student student1 = new Student(1000, "John", "male", 18, 223_456_7890L, 3.8, 'b', false);
-    student1.compute();
-
-    Student student2 = new Student(); // 1001, "Raj", "male", 21, 223_456_9990L, 3.4, 'M', true
-    student2.compute();
-
+    Student student2 = new Student(1001, "Raj", "male", 21, 223_456_9990L, 3.4, 'M', true);
     Student student3 = new Student(1002, "Anita", "female", 20, 223_456_8888L, 4.0, 'M', true);
-    student3.compute();
-
-    System.out.println("Student.computeCount: " + Student.computeCount);
+    System.out.println("Student.sudentCount: " + Student.sudentCount);
   }
 }
