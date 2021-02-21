@@ -159,6 +159,43 @@ class BasicsDemo {
     System.out.println("list.length: " + list.length);
   }
 
+  static void preAndPost() {
+    System.out.println("\nInside preAndPost...");
+    int x = 5;
+    --x;
+    System.out.println("x: " + x);
+    int y = x--;
+    System.out.println("y: " + y + ", x: " + x);
+    int index = -1;
+    int[] array = new int[3];
+    array[index++] = 10;
+    array[index++] = 20;
+    array[index++] = 30;
+
+    System.out.println(index);
+  }
+
+  static void compoundArithmeticAssigment() {
+    int x = 100;
+
+    System.out.println("x += 5: " + (x += 5));
+    System.out.println("x -= 5: " + (x -= 5));
+    System.out.println("x *= 5: " + (x *= 5));
+    System.out.println("x /= 5: " + (x /= 5));
+    System.out.println("x %= 5: " + (x %= 5));
+
+    //Invalid
+    System.out.println("x =+ 5: " + (x =+ 5)); // Unary plus ~ x +5
+    System.out.println("x =- 5: " + (x =- 5)); // Unary plus ~ x +5
+    // System.out.println("x =* 5: " + (x =* 5)); // invalid expressions
+    // System.out.println("x =/ 5: " + (x =/ 5)); // invalid expressions
+    // System.out.println("x =% 5: " + (x =% 5)); // invalid expressions
+
+  }
+
+  static void isOddOrEven(int num){
+    System.out.println(num % 2);
+  }
   public static void main(String[] args){
     // print();
     // primitives();
@@ -178,9 +215,11 @@ class BasicsDemo {
     // go(1000);
     // byte b = 22;
     // go(b);
-    varargsOverLoad(true, 1,2,3);
-    varargsOverLoad(true, 1,2,3,4,5,6,7,8);
-    varargsOverLoad(true);
-
+    // varargsOverLoad(true, 1,2,3);
+    // varargsOverLoad(true, 1,2,3,4,5,6,7,8);
+    // varargsOverLoad(true);
+    // preAndPost();
+    // compoundArithmeticAssigment();
+    isOddOrEven(50);
   }
 }
