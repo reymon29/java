@@ -232,10 +232,15 @@ class BasicsDemo {
   }
 
   static boolean update(Student s, String name){
-    if (s == null) {
+    /* if (s == null) {
       return false;
     }
     s.name = name;
+    return true; */
+
+    if (s != null && s.id > 1000) {
+      s.name = name;
+    }
     return true;
   }
 
