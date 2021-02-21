@@ -79,16 +79,16 @@ class BasicsDemo {
     System.out.println("Project: " + scores[3]);
     System.out.println("# of exams: " + scores.length);
 
-    Student[] students = {new Student(), new Student(), new Student()};
+    // Student[] students = {new Student(), new Student(), new Student()};
     // students[0] = new Student();
     // students[1] = new Student();
     // students[2] = new Student();
-    students[0].name = "John";
-    students[1].name = "Raj";
-    students[2].name = "Anita";
-    System.out.println("Student 1: " + students[0].name);
-    System.out.println("Student 2: " + students[1].name);
-    System.out.println("Student 3: " + students[2].name);
+    // students[0].name = "John";
+    // students[1].name = "Raj";
+    // students[2].name = "Anita";
+    // System.out.println("Student 1: " + students[0].name);
+    // System.out.println("Student 2: " + students[1].name);
+    // System.out.println("Student 3: " + students[2].name);
   }
 
   static void threeDimensionalArrays() {
@@ -207,7 +207,7 @@ class BasicsDemo {
   }
 
   static void comparisonOperatios(){
-    int age = 25;
+    int age = 20;
     if (age > 21) {
       System.out.println("Graduate student");
     }
@@ -217,6 +217,26 @@ class BasicsDemo {
 	  System.out.println("age <= 21: " + (age <= 21));	  
 	  System.out.println("age == 21: " + (age == 21)); // equal to (equality operator)
 	  System.out.println("age != 21: " + (age != 21)); // not equal to (equality operator)
+
+    boolean isInternational = true;
+		//System.out.println("isInternational <= true: " + (isInternational <= true));  
+		System.out.println("isInternational == true: " + (isInternational == true)); 
+		System.out.println("isInternational != true: " + (isInternational != true));
+		
+		Student s1 = new Student(1000, "Dheeru");
+		Student s2 = new Student(1000, "Dheeru");
+		System.out.println("s1 == s2: " + (s1 == s2)); // See object class
+		System.out.println("s1 != s2: " + (s1 != s2));
+		
+    update(s1, "John");
+  }
+
+  static boolean update(Student s, String name){
+    if (s == null) {
+      return false;
+    }
+    s.name = name;
+    return true;
   }
 
   public static void main(String[] args){
