@@ -206,6 +206,19 @@ class BasicsDemo {
 	  System.out.println("('a' + 'b'): " + ('a' +'b')); // 'a' & 'b' are promoted to ints and the respective equivalents 97 & 98 are added
   }
 
+  static void comparisonOperatios(){
+    int age = 25;
+    if (age > 21) {
+      System.out.println("Graduate student");
+    }
+    System.out.println("age > 21: " + (age > 21));
+	  System.out.println("age >= 21: " + (age >= 21));  
+	  System.out.println("age < 21: " + (age < 21));
+	  System.out.println("age <= 21: " + (age <= 21));	  
+	  System.out.println("age == 21: " + (age == 21)); // equal to (equality operator)
+	  System.out.println("age != 21: " + (age != 21)); // not equal to (equality operator)
+  }
+
   public static void main(String[] args){
     // print();
     // primitives();
@@ -231,6 +244,7 @@ class BasicsDemo {
     // preAndPost();
     // compoundArithmeticAssigment();
     // isOddOrEven(50);
-    charTypePromotion();
+    // charTypePromotion();
+    comparisonOperatios();
   }
 }
