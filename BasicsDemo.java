@@ -376,10 +376,9 @@ class BasicsDemo {
     // for(int i = 0; i < iArray.length; i++){
     //   System.out.println(iArray[i] + " ");
     // }
-
-    for (int i : iArray) { //for each element i in iArray
-      System.out.println(iArray[i] + " ");
-    }
+    // for (int i : iArray) { //for each element i in iArray
+    //   System.out.println(iArray[i] + " ");
+    // }
      // print();
     // primitives();
     // typeCasting();
