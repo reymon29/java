@@ -368,12 +368,16 @@ class BasicsDemo {
   public static void main(String[] args){
     int[] iArray = {0,1,2,3,4,5,6,7,8,9};
     // for(int i = 0; i < iArray.length; System.out.println(iArray[i++]));
-    for(int i = 0, j = iArray.length-1; i < j; i++, j--){
-      int temp = iArray[i];
-      iArray[i] = iArray[j];
-      iArray[j] = temp;
-    }
-    for(int i = 0; i < iArray.length; i++){
+    // for(int i = 0, j = iArray.length-1; i < j; i++, j--){
+    //   int temp = iArray[i];
+    //   iArray[i] = iArray[j];
+    //   iArray[j] = temp;
+    // }
+    // for(int i = 0; i < iArray.length; i++){
+    //   System.out.println(iArray[i] + " ");
+    // }
+
+    for (int i : iArray) { //for each element i in iArray
       System.out.println(iArray[i] + " ");
     }
      // print();
