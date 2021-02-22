@@ -367,11 +367,11 @@ class BasicsDemo {
 
   public static void main(String[] args){
     int[] iArray = {0,1,2,3,4,5,6,7,8,9};
+    for(int i = 0; i < iArray.length; System.out.println(iArray[i++]));
     for(int i = 0; i < iArray.length; i++){
       System.out.println(iArray[i]);
     }
-  }
-  // print();
+     // print();
     // primitives();
     // typeCasting();
     // arrays();
@@ -403,4 +403,6 @@ class BasicsDemo {
     // switchExample();
     // int min = min(9,3);
     // System.out.println("min: " + min);
+  }
+ 
 }
