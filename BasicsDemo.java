@@ -1,4 +1,6 @@
 import java.math.BigDecimal;
+// import java.util.Date;
+import java.util.ArrayList;
 class BasicsDemo {
   int id = 0;
   int Id= 0;
@@ -200,9 +202,9 @@ class BasicsDemo {
   static void charTypePromotion() {
 	  System.out.println("\nInside charTypePromotion ...");
 	  char char1 = 50; // Will be assigned corresponding UTF16 value 2
-	  System.out.println("char1: " + char1); 
-	  System.out.println("(73 - char1): " + (73 - char1)); // char1 gets promoted to int, i.e., decimal equivalent 50 in UTF16 is used	  
-	  System.out.println("(char1 - '3'): " + (char1 - '3')); // char1 & '3' are promoted to ints	
+	  System.out.println("char1: " + char1);
+	  System.out.println("(73 - char1): " + (73 - char1)); // char1 gets promoted to int, i.e., decimal equivalent 50 in UTF16 is used
+	  System.out.println("(char1 - '3'): " + (char1 - '3')); // char1 & '3' are promoted to ints
 	  System.out.println("('a' + 'b'): " + ('a' +'b')); // 'a' & 'b' are promoted to ints and the respective equivalents 97 & 98 are added
   }
 
@@ -212,22 +214,22 @@ class BasicsDemo {
       System.out.println("Graduate student");
     }
     System.out.println("age > 21: " + (age > 21));
-	  System.out.println("age >= 21: " + (age >= 21));  
+	  System.out.println("age >= 21: " + (age >= 21));
 	  System.out.println("age < 21: " + (age < 21));
-	  System.out.println("age <= 21: " + (age <= 21));	  
+	  System.out.println("age <= 21: " + (age <= 21));
 	  System.out.println("age == 21: " + (age == 21)); // equal to (equality operator)
 	  System.out.println("age != 21: " + (age != 21)); // not equal to (equality operator)
 
     boolean isInternational = true;
-		//System.out.println("isInternational <= true: " + (isInternational <= true));  
-		System.out.println("isInternational == true: " + (isInternational == true)); 
+		//System.out.println("isInternational <= true: " + (isInternational <= true));
+		System.out.println("isInternational == true: " + (isInternational == true));
 		System.out.println("isInternational != true: " + (isInternational != true));
-		
+
 		Student s1 = new Student(1000, "Dheeru");
 		Student s2 = new Student(1000, "Dheeru");
 		System.out.println("s1 == s2: " + (s1 == s2)); // See object class
 		System.out.println("s1 != s2: " + (s1 != s2));
-		
+
     update(s1, "John");
   }
 
@@ -249,34 +251,34 @@ class BasicsDemo {
 		int age = 37;
 	    int salary = 85000;
 	    boolean hasBadCredit = false;
-		
+
 		// 1. Core (AND, OR, NOT & Operator Chaining)
-	    
+
 	    if (age > 35 && salary > 90000 || !hasBadCredit) {
 	    	System.out.println("Loan approved!");
 	    } else {
 			System.out.println("Loan not approved!");
 		}
-		
-		// 2. 
+
+		// 2.
 		//    (a) Left-associative ~ Order of grouping
 		//    (b) Associativity (a && b) && c = a && (b && c)
 		//    Applies to both && and ||
-		
-		
-		// 3. 
+
+
+		// 3.
 		//    (a) Operator precedence of Logical Operators: Helps with ONLY grouping operations. Not order of execution. (! > && > ||)
-		
+
 		          // Other Examples: A && B || C && D = (A && B) || (C && D)
 				  //                 A && B && C || D = ((A && B) && C) || D
-		
-		
+
+
 		//    (b) Operator Precedence across logical, comparison and arithmetic
 		//          ! > arithmetic > comparison > &&, ||
 		//    See resources section for complete precedence rules
-		
+
 		// ALWAYS USE PARENTHESIS for READABILITY. Not everyone is aware of precedence rules
-		
+
 		// 4. Use && to avoid NullPointerException
 		Student s1 = new Student(1001, "Raj");
 		update(s1, "Dheeru");
@@ -286,17 +288,17 @@ class BasicsDemo {
     System.out.println("\nInside bitwiseOperators ...");
     int x = 1;
   int y = 3;
-  
+
   System.out.println("x & y: " + (x & y));
   System.out.println("x | y: " + (x | y));
   System.out.println("x ^ y: " + (x ^ y));
   System.out.println("~x: " + (~x));
   System.out.println("true & false: " + (true & false));
-   
+
   char c1 = 'a'; // U+0061 --> 0110 0001
   char c2 = 'b'; // U+0062 --> 0110 0010
-  System.out.println("c1 | c2: " + (c1 | c2)); // 0110 0011 --> 99 in decimal		
-  
+  System.out.println("c1 | c2: " + (c1 | c2)); // 0110 0011 --> 99 in decimal
+
   // Since bitwise work only on Integer types, following will not compile
   //double d1 = 3.14;
   //double d2 = 5.15;
@@ -305,29 +307,29 @@ class BasicsDemo {
 
   static boolean ifStatement() {
 		boolean approved = false;
-		
+
 		int age = 27;
 		int salary = 60000;
 		boolean hasBadCredit = false;
-		
-		if (age >= 25 && age <= 35 && salary >= 50000) {		
-			approved = true;            			
+
+		if (age >= 25 && age <= 35 && salary >= 50000) {
+			approved = true;
 			System.out.println("age >= 25 && age <= 35 && salary >= 50000");
 		} else if (age > 35 && age <= 45 && salary >= 70000) {
-			approved = true;			
+			approved = true;
 			System.out.println("age > 35 && age <= 45 && salary >= 70000");
 		} else if (age > 45 && age <= 55 && salary >= 90000) {
-			approved = true;			
+			approved = true;
 			System.out.println("age > 45 && age <= 55 && salary >= 90000");
 		} else {
 		    if (age > 55 && !hasBadCredit) {
-				approved = true;			
+				approved = true;
 				System.out.println("age > 55 && !hasBadCredit");
 			}
 			System.out.println("else block");
 		}
-		
-				
+
+
 		System.out.println("outside if");
 		return approved;
 	}
@@ -359,7 +361,7 @@ class BasicsDemo {
   //               break;
   //     default: System.out.println("April");
   // }
-	
+
   static int min(int x, int y){
     int result = (x < y) ? x : y;
     return result;
@@ -368,35 +370,35 @@ class BasicsDemo {
   static void labeledBreak() {
     System.out.println("\nInside labeledBreak ...");
     int num = 0;
-  
+
     outermost: for (int i = 0; i < 10; i++) {
-        for (int j = 0; j < 10; j++) {    
+        for (int j = 0; j < 10; j++) {
             if (i == 5 && j == 5) {
                 break outermost;
             }
             num++;
         }
     }
-  
-    System.out.println("num: " + num); // prints 55		
+
+    System.out.println("num: " + num); // prints 55
   }
 
   static void labeledContinue() {
     System.out.println("\nInside labeledContinue ...");
     int num = 0;
-  
+
     outermost: for (int i = 0; i < 10; i++) {
-        for (int j = 0; j < 10; j++) {    
+        for (int j = 0; j < 10; j++) {
             if (i == 5 && j == 5) {
                 continue outermost;
             }
             num++;
         }
     }
-  
-    System.out.println("num: " + num); // prints 55		
+
+    System.out.println("num: " + num); // prints 55
   }
-  
+
 
   public static void main(String[] args){
     int[] iArray = {0,1,2,3,4,5,6,7,8,9};
@@ -445,7 +447,10 @@ class BasicsDemo {
     // int min = min(9,3);
     // System.out.println("min: " + min);
     // labeledBreak();
-    labeledContinue();
+    // labeledContinue();
+    java.util.Date date;
+    ArrayList list;
+    java.sql.Date date2;
   }
- 
+
 }
