@@ -1,7 +1,7 @@
-package basics;
+package com.semticsquare.basics;
 
-import java.math.BigDecimal;
-class BasicsDemo {
+
+public class BasicsDemo {
   int id = 0;
   int Id= 0;
   int ID= 0;
@@ -208,57 +208,57 @@ class BasicsDemo {
 	  System.out.println("('a' + 'b'): " + ('a' +'b')); // 'a' & 'b' are promoted to ints and the respective equivalents 97 & 98 are added
   }
 
-  static void comparisonOperatios(){
-    int age = 20;
-    if (age > 21) {
-      System.out.println("Graduate student");
-    }
-    System.out.println("age > 21: " + (age > 21));
-	  System.out.println("age >= 21: " + (age >= 21));  
-	  System.out.println("age < 21: " + (age < 21));
-	  System.out.println("age <= 21: " + (age <= 21));	  
-	  System.out.println("age == 21: " + (age == 21)); // equal to (equality operator)
-	  System.out.println("age != 21: " + (age != 21)); // not equal to (equality operator)
+  // static void comparisonOperatios(){
+  //   int age = 20;
+  //   if (age > 21) {
+  //     System.out.println("Graduate student");
+  //   }
+  //   System.out.println("age > 21: " + (age > 21));
+	//   System.out.println("age >= 21: " + (age >= 21));  
+	//   System.out.println("age < 21: " + (age < 21));
+	//   System.out.println("age <= 21: " + (age <= 21));	  
+	//   System.out.println("age == 21: " + (age == 21)); // equal to (equality operator)
+	//   System.out.println("age != 21: " + (age != 21)); // not equal to (equality operator)
 
-    boolean isInternational = true;
-		//System.out.println("isInternational <= true: " + (isInternational <= true));  
-		System.out.println("isInternational == true: " + (isInternational == true)); 
-		System.out.println("isInternational != true: " + (isInternational != true));
+  //   boolean isInternational = true;
+	// 	//System.out.println("isInternational <= true: " + (isInternational <= true));  
+	// 	System.out.println("isInternational == true: " + (isInternational == true)); 
+	// 	System.out.println("isInternational != true: " + (isInternational != true));
 		
-		Student s1 = new Student(1000, "Dheeru");
-		Student s2 = new Student(1000, "Dheeru");
-		System.out.println("s1 == s2: " + (s1 == s2)); // See object class
-		System.out.println("s1 != s2: " + (s1 != s2));
+	// 	Student s1 = new Student(1000, "Dheeru");
+	// 	Student s2 = new Student(1000, "Dheeru");
+	// 	System.out.println("s1 == s2: " + (s1 == s2)); // See object class
+	// 	System.out.println("s1 != s2: " + (s1 != s2));
 		
-    update(s1, "John");
-  }
+  //   update(s1, "John");
+  // }
 
-  static boolean update(Student s, String name){
-    /* if (s == null) {
-      return false;
-    }
-    s.name = name;
-    return true; */
+  // static boolean update(Student s, String name){
+  //   /* if (s == null) {
+  //     return false;
+  //   }
+  //   s.name = name;
+  //   return true; */
 
-    if (s != null && s.id > 1000) {
-      s.name = name;
-    }
-    return true;
-  }
+  //   if (s != null && s.id > 1000) {
+  //     s.name = name;
+  //   }
+  //   return true;
+  // }
 
-  static void logicalOperators() {
-		System.out.println("\nInside logicalOperators ...");
-		int age = 37;
-	    int salary = 85000;
-	    boolean hasBadCredit = false;
+  // static void logicalOperators() {
+	// 	System.out.println("\nInside logicalOperators ...");
+	// 	int age = 37;
+	//     int salary = 85000;
+	//     boolean hasBadCredit = false;
 		
-		// 1. Core (AND, OR, NOT & Operator Chaining)
+	// 	// 1. Core (AND, OR, NOT & Operator Chaining)
 	    
-	    if (age > 35 && salary > 90000 || !hasBadCredit) {
-	    	System.out.println("Loan approved!");
-	    } else {
-			System.out.println("Loan not approved!");
-		}
+	//     if (age > 35 && salary > 90000 || !hasBadCredit) {
+	//     	System.out.println("Loan approved!");
+	//     } else {
+	// 		System.out.println("Loan not approved!");
+	// 	}
 		
 		// 2. 
 		//    (a) Left-associative ~ Order of grouping
@@ -280,9 +280,9 @@ class BasicsDemo {
 		// ALWAYS USE PARENTHESIS for READABILITY. Not everyone is aware of precedence rules
 		
 		// 4. Use && to avoid NullPointerException
-		Student s1 = new Student(1001, "Raj");
-		update(s1, "Dheeru");
-	}
+	// 	Student s1 = new Student(1001, "Raj");
+	// 	update(s1, "Dheeru");
+	// }
 
   static void bitwiseOperators() {
     System.out.println("\nInside bitwiseOperators ...");
@@ -399,6 +399,9 @@ class BasicsDemo {
     System.out.println("num: " + num); // prints 55		
   }
   
+  public void foo() {
+    System.out.println("Inside foo ...");
+  }
 
   public static void main(String[] args){
     int[] iArray = {0,1,2,3,4,5,6,7,8,9};
