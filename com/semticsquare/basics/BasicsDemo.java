@@ -1,6 +1,5 @@
 package com.semticsquare.basics;
 
-
 public class BasicsDemo {
   int id = 0;
   int Id= 0;
