@@ -1,5 +1,3 @@
-package basics;
-
 import java.math.BigDecimal;
 // import java.util.Date;
 import java.util.ArrayList;
@@ -450,9 +448,23 @@ class BasicsDemo {
     // System.out.println("min: " + min);
     // labeledBreak();
     // labeledContinue();
-    java.util.Date date;
-    ArrayList list;
-    java.sql.Date date2;
+    // java.util.Date date;
+    // ArrayList list;
+    // java.sql.Date date2;
+
+    String s = "hello " + " world!";
+    System.out.println("s: " + s);
+
+    StringBuffer sb = new StringBuffer(s);
+    sb.append(" good").append(" morning :)!");
+    System.out.println("sb: " + sb.toString());
+    System.out.println("sb.length: " + sb.length());
+    sb.delete(1, 5);
+    System.out.println("sb: " + sb.toString());
+    System.out.println("sb.length: " + sb.length());
+    sb.insert(1, "ey");
+    System.out.println("sb: " + sb.toString());
+    System.out.println("sb.length: " + sb.length());
   }
 
 }
