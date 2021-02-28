@@ -452,19 +452,25 @@ class BasicsDemo {
     // ArrayList list;
     // java.sql.Date date2;
 
-    String s = "hello " + " world!";
-    System.out.println("s: " + s);
+    // String s = "hello " + " world!";
+    // System.out.println("s: " + s);
 
-    StringBuilder sb = new StringBuilder(s);
-    sb.append(" good").append(" morning :)!");
-    System.out.println("sb: " + sb.toString());
-    System.out.println("sb.length: " + sb.length());
-    sb.delete(1, 5);
-    System.out.println("sb: " + sb.toString());
-    System.out.println("sb.length: " + sb.length());
-    sb.insert(1, "ey");
-    System.out.println("sb: " + sb.toString());
-    System.out.println("sb.length: " + sb.length());
+    // StringBuilder sb = new StringBuilder(s);
+    // sb.append(" good").append(" morning :)!");
+    // System.out.println("sb: " + sb.toString());
+    // System.out.println("sb.length: " + sb.length());
+    // sb.delete(1, 5);
+    // System.out.println("sb: " + sb.toString());
+    // System.out.println("sb.length: " + sb.length());
+    // sb.insert(1, "ey");
+    // System.out.println("sb: " + sb.toString());
+    // System.out.println("sb.length: " + sb.length());
+
+    String s1 = "Hello \"Mr.\" John, \n\tHow are you\\";
+    System.out.println(s1);
+
+    char[] s2 = {'\'', '"', 'l', 'l', 'o'};
+
   }
 
 }
