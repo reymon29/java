@@ -511,6 +511,18 @@ class BasicsDemo {
 		
 		//Math math = new Math();
 	}
+
+	public BasicsDemo() {
+		System.out.println("Inside no-arg constructor ...");
+	}
+
+	public BasicsDemo(int id) {
+		System.out.println("Inside constructor with a parameter...");
+	}
+
+	{
+		System.out.println("Inside instance initializer...");
+	}
 	
 	public static void main(String[] args) {
 	  // Language Basics 1
@@ -543,8 +555,8 @@ class BasicsDemo {
       // package creation demo
       //stringExamples();
 	  //stringPool();	
-	  mathDemo();
-	  	
+	//   mathDemo();
+	BasicsDemo bd = new BasicsDemo(1);
     }
 		
 		
