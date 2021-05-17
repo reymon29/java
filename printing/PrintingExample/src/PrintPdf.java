@@ -6,20 +6,31 @@ import org.apache.pdfbox.pdmodel.PDDocument;
 import org.apache.pdfbox.printing.PDFPageable;
 
 
-
 public class PrintPdf {
+	
 	public static void main(String args[]) throws Exception {
+		String myLabelType = args[0];
+		String PATH  = "C:/LabelPrinting";
+		fileWithDirectoryAssurance(PATH);
 		long startTime = System.nanoTime();
-        PDDocument document = PDDocument.load(new File("C:/Users/Rey/Documents/GitHub/java/printing/PrintingExample/src/SampleLabel.pdf"));
-//        PrintService myPrintService = findPrintService("Zebra ZP 500 (ZPL) (Copy 1)");
-//        PrintService myPrintService = findPrintService("Brother QL-700");
-        PrintService myPrintService = findPrintService("Zebra ZP 500 (ZPL)");
-        PrinterJob job = PrinterJob.getPrinterJob();
-        job.setPageable(new PDFPageable(document));
-        job.setPrintService(myPrintService);
-        job.print();
+		long endTime = System.nanoTime();
+        PDDocument document = PDDocument.load(new File("C:/LabelPrinting/Sample.pdf"));
+        if (myLabelType.equals("QRLabel")) {
+        	 PrintService myPrintService = findPrintService("Brother");
+        	 PrinterJob job = PrinterJob.getPrinterJob();
+             job.setPageable(new PDFPageable(document));
+             job.setPrintService(myPrintService);
+             job.print();
+        } else if (myLabelType.equals("ShippingLabel")) {
+        	System.out.println("Printing...Label");
+        	 PrintService myPrintService = findPrintService("Zebra");
+        	 PrinterJob job = PrinterJob.getPrinterJob();
+             job.setPageable(new PDFPageable(document));
+             job.setPrintService(myPrintService);
+             job.print();
+        }
+       
         
-        long endTime = System.nanoTime();
         long timeElapsed = endTime - startTime;
         System.out.println("Execution time in nanoseconds  : " + timeElapsed);
         System.out.println("Execution time in seconds : " +
@@ -29,10 +40,17 @@ public class PrintPdf {
     private static PrintService findPrintService(String printerName) {
         PrintService[] printServices = PrintServiceLookup.lookupPrintServices(null, null);
         for (PrintService printService : printServices) {
-            if (printService.getName().trim().equals(printerName)) {
+            if (printService.getName().trim().contains(printerName)) {
                 return printService;
             }
         }
         return null;
+    }
+    
+    /** Creates parent directories if necessary. Then returns file */
+    private static File fileWithDirectoryAssurance(String directory) {
+        File dir = new File(directory);
+        if (!dir.exists()) dir.mkdirs();
+        return new File(directory);
     }
 }
